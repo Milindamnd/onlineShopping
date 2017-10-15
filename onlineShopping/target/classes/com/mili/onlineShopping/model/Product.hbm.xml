@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.mili.onlineShopping.model">
+
+	<class name="Product" table="PRODUCT">
+		<id name="productId" type="java.lang.Integer" column="PRODUCT_ID">
+			<generator class="identity" />
+		</id>
+		<property name="code" type="string" column="CODE"/>
+		<property name="name" type="string" column="NAME"/>
+		<property name="brand" type="string" column="BRAND"/>
+		<property name="description" type="string" column="DESCRIPTION"/>
+		<property name="unitPrice" type="double" column="UNIT_PRICE"/>
+		<property name="qty" type="java.lang.Integer" column="QTY"/>
+		<property name="active" type="boolean" column="IS_ACTIVE"/>
+		<property name="category_id" type="java.lang.Integer" column="CATEGORY_ID"/>
+		<property name="supplier_id" type="java.lang.Integer" column="USER_ID"/>
+		<property name="purchases" type="java.lang.Integer" column="PURCHASES"/>
+		<property name="views" type="java.lang.Integer" column="VIEWS"/>
+	</class>
+</hibernate-mapping>
